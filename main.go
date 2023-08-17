@@ -42,37 +42,37 @@ func main() {
 	httpClient := &http.Client{}
 	for i := 0; i < numRequests; i++ {
 
-		responseMessage := fmt.Sprintf("[%s] Próba: %d\n ", time.Now().Format(time.RFC3339), i+1)
-		logger.WriteLog(responseMessage)
+		requestMessage := fmt.Sprintf("[%s] Próba: %d\n ", time.Now().Format(time.RFC3339), i+1)
+		logger.WriteLog(requestMessage)
 
 		startTime := time.Now()
 		resp, err := httpClient.Get(targetHost)
 		duration := time.Since(startTime)
 		if err != nil {
 			duration = 0
-			responseMessage := fmt.Sprintf("[%s] Błąd podczas wysyłania żądania: %s\n", time.Now().Format(time.RFC3339), err)
-			logger.WriteLog(responseMessage)
+			requestMessage := fmt.Sprintf("[%s] Błąd podczas wysyłania żądania: %s\n", time.Now().Format(time.RFC3339), err)
+			logger.WriteLog(requestMessage)
 		}
-		responseMessage = fmt.Sprintf("[%s] Żądanie %d wysłane\n", time.Now().Format(time.RFC3339), i+1)
-		logger.WriteLog(responseMessage)
+		requestMessage = fmt.Sprintf("[%s] Żądanie %d wysłane\n", time.Now().Format(time.RFC3339), i+1)
+		logger.WriteLog(requestMessage)
 		defer resp.Body.Close()
 
-		responseMessage = fmt.Sprintf("[%s] Czas odpowiedzi: %v\n", time.Now().Format(time.RFC3339), duration)
-		logger.WriteLog(responseMessage)
+		requestMessage = fmt.Sprintf("[%s] Czas odpowiedzi: %v\n", time.Now().Format(time.RFC3339), duration)
+		logger.WriteLog(requestMessage)
 
 		statusCode := checkStatusCode(resp)
-		responseMessage = fmt.Sprintf("[%s] Kod odpowiedzi HTTP: %d\n", time.Now().Format(time.RFC3339), statusCode)
-		logger.WriteLog(responseMessage)
+		requestMessage = fmt.Sprintf("[%s] Kod odpowiedzi HTTP: %d\n", time.Now().Format(time.RFC3339), statusCode)
+		logger.WriteLog(requestMessage)
 
 		if !checkJSONContentType(resp) {
-			responseMessage = fmt.Sprintf("[%s] Odpowiedź nie jest typu JSON \n", time.Now().Format(time.RFC3339))
-			logger.WriteLog(responseMessage)
+			requestMessage = fmt.Sprintf("[%s] Odpowiedź nie jest typu JSON \n", time.Now().Format(time.RFC3339))
+			logger.WriteLog(requestMessage)
 		}
 
 		if !validateJSONSyntax(resp) {
 			now := time.Now().Format(time.RFC3339)
-			responseMessage = fmt.Sprintf("[%s] Błąd podczas walidacji JSON \n", now)
-			logger.WriteLog(responseMessage)
+			requestMessage = fmt.Sprintf("[%s] Błąd podczas walidacji JSON \n", now)
+			logger.WriteLog(requestMessage)
 		}
 
 		time.Sleep(intervalSecs * time.Second)

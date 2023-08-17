@@ -1,0 +1,30 @@
+[2023-08-17T10:24:06+02:00] Próba: 1
+ [2023-08-17T10:24:07+02:00] Żądanie 1 wysłane
+[2023-08-17T10:24:07+02:00] Czas odpowiedzi: 468.3629ms
+[2023-08-17T10:24:07+02:00] Kod odpowiedzi HTTP: 200
+[2023-08-17T10:24:07+02:00] Odpowiedź nie jest typu JSON 
+[2023-08-17T10:24:07+02:00] Błąd podczas walidacji JSON 
+[2023-08-17T10:24:17+02:00] Próba: 2
+ [2023-08-17T10:24:17+02:00] Żądanie 2 wysłane
+[2023-08-17T10:24:17+02:00] Czas odpowiedzi: 107.8098ms
+[2023-08-17T10:24:17+02:00] Kod odpowiedzi HTTP: 200
+[2023-08-17T10:24:17+02:00] Odpowiedź nie jest typu JSON 
+[2023-08-17T10:24:17+02:00] Błąd podczas walidacji JSON 
+[2023-08-17T10:24:27+02:00] Próba: 3
+ [2023-08-17T10:24:27+02:00] Żądanie 3 wysłane
+[2023-08-17T10:24:27+02:00] Czas odpowiedzi: 106.8779ms
+[2023-08-17T10:24:27+02:00] Kod odpowiedzi HTTP: 200
+[2023-08-17T10:24:27+02:00] Odpowiedź nie jest typu JSON 
+[2023-08-17T10:24:27+02:00] Błąd podczas walidacji JSON 
+[2023-08-17T10:24:37+02:00] Próba: 4
+ [2023-08-17T10:24:37+02:00] Żądanie 4 wysłane
+[2023-08-17T10:24:37+02:00] Czas odpowiedzi: 105.4773ms
+[2023-08-17T10:24:37+02:00] Kod odpowiedzi HTTP: 200
+[2023-08-17T10:24:37+02:00] Odpowiedź nie jest typu JSON 
+[2023-08-17T10:24:37+02:00] Błąd podczas walidacji JSON 
+[2023-08-17T10:24:47+02:00] Próba: 5
+ [2023-08-17T10:24:47+02:00] Żądanie 5 wysłane
+[2023-08-17T10:24:47+02:00] Czas odpowiedzi: 106.857ms
+[2023-08-17T10:24:47+02:00] Kod odpowiedzi HTTP: 200
+[2023-08-17T10:24:47+02:00] Odpowiedź nie jest typu JSON 
+[2023-08-17T10:24:47+02:00] Błąd podczas walidacji JSON 
